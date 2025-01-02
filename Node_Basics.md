@@ -12,3 +12,22 @@ Server-side rendering ek process hai jisme server pe HTML page generate hota hai
 
 4.single threaded?
 Ek time pe sirf ek hi task perform hoga.And haar task sequentially perform hoga .second task tab tak execute nhi hoga jab tak first task complete na ho jaye.
+
+5.event, event emitter, event queue, event loop,  event-driven architecture 
+
+i.Event->any action (button click,data fetching,data receiving,database query execution)
+
+ii.Event emitter->ye event generate karta hai and listener ko batata hai ki koi event hua h.
+
+iii.Event queue->saara event ek queue me rahta hai and sequentially execute hota h.
+
+iv.Event loop->Event loop ek infinite loop hai jo continuously event queue check karta hai aur kaam execute karta hai.
+Example:-
+User ne server se data maanga (event).
+Server ne bola: "Data ready hone do, tab tak dusra kaam kar lo."Ab event loop continuously check karte rahega ki data download hua ya nhii. Now, Event loop ne dekha ki data download ho gaya, toh user ko response de dega.
+
+v.Event-driven architecture ->Pura system hai jo events ke aane par kaam karta hai and wo saara kaam efficiently aur asynchronously hota h.
+
+6.Node js is good for ->real time application,light weight and scalable,microservice based architecture.
+
+Node js is not good for->application that uses heavy cpu processing .(for such scenerios use multi-threaded like JAVA )

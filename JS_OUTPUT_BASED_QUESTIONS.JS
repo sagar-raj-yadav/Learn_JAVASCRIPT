@@ -53,18 +53,39 @@ const { age ,gender}=data2;
 console.log( age ,gender);  // 20 M
 
 //Q.8 merge 2 object
-const data4 = { name: "a", age: 23, iscorect: true };
+const data3 = {hobby:"gaming", name: "a", age: 23, iscorect: true };
 const info = { hobby: "coding", country: "India" };
 
-const data3 = { ...data, ...info };
-console.log(data3);
+const data4 = { ...data3, ...info };
+console.log(data4);
 
 /*output->
 {
+  hobby: 'coding',
   name: 'a',
   age: 23,
   iscorect: true,
-  hobby: 'coding',
   country: 'India'
 }
 */
+
+//Q.9 merge 2 Array
+const data6=[2,3,4,5];
+const data7=[9,8,0,8];
+const final=[...data6,...data7];
+console.log(final[5]);  //[ 2, 3, 4, 5, 9, 8, 0, 8]
+
+//Q,10 OR me first positive value hi lenge
+const z1=10 || "sagar" || 30
+console.log(z1)  //10
+
+const z2=false ||"sagar"  || 30
+console.log(z2) // sagar
+
+//AND last wala value return karega
+const z3=12 &&"sagar"  && 30
+console.log(z2) // 30
+
+//Q.11
+
+// https://www.youtube.com/watch?v=SFgppU2J8To
