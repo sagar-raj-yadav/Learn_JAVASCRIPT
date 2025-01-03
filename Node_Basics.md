@@ -31,3 +31,20 @@ v.Event-driven architecture ->Pura system hai jo events ke aane par kaam karta h
 6.Node js is good for ->real time application,light weight and scalable,microservice based architecture.
 
 Node js is not good for->application that uses heavy cpu processing .(for such scenerios use multi-threaded like JAVA )
+
+7.what is node_modules? ->it contains all dependencies of my project.
+
+NPM-> it manages the dependencies of my project.
+package.json ->contains metadata of my project
+
+8.function vs module?
+Function->ye ek block of code hai jo ek specific task perform karta hai.
+Module->ye ek file hai jo multiple function ko export karta hai.
+
+9.Top 5 built in modules?
+fs,path,os,events,http
+
+10.HTTP -> ye ek protocol hai jo web browsers aur web servers ke beech data transfer karne ke liye use hota hai.
+
+11.Express js supports template engine? 
+Template engine like EJS, Pug.. Template engine  dynamic  HTML page generate karke deta hai ,issse hum directly HTML page client side pe render  karwa sakte h.

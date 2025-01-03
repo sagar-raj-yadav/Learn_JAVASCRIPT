@@ -87,5 +87,17 @@ const z3=12 &&"sagar"  && 30
 console.log(z2) // 30
 
 //Q.11
+console.log(Promise.resolve(6))  // Promise <fullfilled/>  { 6 }
 
-// https://www.youtube.com/watch?v=SFgppU2J8To
+//Q.11 JSON.parse()
+convert JSON to javascript value(like object,array,string,number)
+
+//Q.12
+let name ="abc"
+
+function getname(){
+  console.log(name)   //cannot access 'name' before initialization 
+  let name="dfff"     //agar yaha name ko fir se initialize nhi kiye hote to error nhi aata
+}
+getname();
+
