@@ -170,3 +170,59 @@ let z=2
 console.log(x === y === --z) //false
 //x===y ->true  and ab true jo hai wo --z se compare hoga 
 // to ye false return karega ,because true kabhi bhi 1 ke equal nhi ho sakte(--z=1) 
+
+// Q.20 
+console.log(h)  //undefined
+var h=9  
+
+//or let me pehle delare karna hoga,fir usse use kar sakte h
+console.log(d)  //error:Cannot access 'd' before initialization//error:Cannot access 'd' before initialization
+let d=9  
+
+//Q.21
+for(var i=0;i<3;i++)
+{setTimeout(()=>console.log(i),2)}  // 3 3 3
+
+// or
+for(let i=0;i<3;i++)
+  {setTimeout(()=>console.log(i),2)} //0 1 2 
+
+//Q.22
+const obj={name:"sagar"}
+let obj2=obj
+obj.name="yadav"
+console.log(obj2.name)  //yadav
+
+//non-primitive datatype jo hai wo as a reference store hota h.
+//agar obj me kuch change hoga to obj2 me bhi change hoga
+
+//Q.23
+console.log(typeof 3+4+"5" )  //number45  ->  typeof 3=number and number+4+5=number45
+
+console.log(2+2+ +"6")  //10 ->agar kisi string ke samne + laga dete hao to wo number ban jata h
+
+//Q.24
+console.log("abc"+ +"dfr") //abcNaN
+// +"dfr"  ->jab bhi kisi string ke pehle unary operaor(+,-..) lagate hai to js uss string ko
+// number me convert karta h,agar string me number nhi h to NaN return karega.
+
+console.log("abc"+ +"3") //abc
+//+"3" ->string "3" me number 3 h, to wo number me convert hoga.
+
+//.245 call
+let name1={
+  first:"akash",
+  last:"yadav",
+  printName:function(){
+    console.log(this.first+" "+this.last)  
+  }
+}
+name1.printName()//akash yadav
+
+
+let name2={
+  first:"ram",
+  last:"sita",
+}
+
+name1.printName.call(name2)  //ram sita
