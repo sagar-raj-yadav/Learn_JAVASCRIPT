@@ -92,6 +92,10 @@ console.log(Promise.resolve(6))  // Promise <fullfilled/>  { 6 }
 //Q.11 JSON.parse()
 convert JSON to javascript value(like object,array,string,number)
 
+=>agar data api se fetch kar rhe h to, response.json() ->convert json to  object
+
+=>JSON.stringify() to convert a Js object into a JSON string. ->convert  object to json  
+
 //Q.12
 let name ="abc"
 
@@ -101,3 +105,68 @@ function getname(){
 }
 getname();
 
+
+//Q.13 
+const name="sagar"
+
+console.log(!typeof name)  //false
+console.log(!typeof name==='object') //false
+console.log(!typeof name==='string')  //false
+console.log(typeof name==='string') //true
+
+//Q.14
+let person={name:"yadav"}
+Object.seal(person)
+
+person.age=23 
+//agar object ko seal kar diye to ,
+// uss object ke andar koi bhi new key:value pair insert nhi kar sakte,
+// but jo existing value h usko sirf change kar skate h
+
+console.log(person.name) //yadav
+console.log(person.age)  //undefined
+
+person.name="sagar"
+console.log(person.name) //sagar
+
+//Q.15)  slice
+const arr=[1,2,3,4]
+console.log(arr.slice(1,3))   //[ 2, 3 ]
+
+//arr.slice(start_index,end_index)  //end_index inlcude nhi hoga
+
+// Q.16 ->Array all properties
+arr.push(20)  , arr.shift() ->remove first , arr.pop() ->remove last value ,
+arr.sort() ,arr.reverse(),arr.fill(-1) ->fill all element to -1 
+
+//Q.17 map vs forEach
+map->returns new array , doesn't affect oiginal array ,
+sort,filter,reduce y sab map function ke last me laga sakte h. 
+
+forEach ->doesn't return anything , it affects original array ,
+sort,filter,reduce ye sab nhi laga sakte
+
+//Q.18
+let a=10
+
+setTimeout(()=>{
+console.log(a)
+},0)
+
+a=30
+//pehel a=10 call stack me jayega ,fir setTimeout web api me chala jayega,fir a=30 call stack me jayega ,
+//ab a=30 ho gya and ab setTimeout call stack me aayega and a=30 print kar dega.
+
+//Q.19
+let s="ddd"
+let t=`ddd`
+console.log(s===t) //true
+console.log(s==t)  //true
+
+//Q.19) JS always compare from left to right
+let x=1
+let y=1
+let z=2
+console.log(x === y === --z) //false
+//x===y ->true  and ab true jo hai wo --z se compare hoga 
+// to ye false return karega ,because true kabhi bhi 1 ke equal nhi ho sakte(--z=1) 
