@@ -294,7 +294,57 @@ myfunction2.apply(person6,arr2)  //vishal 21 ranchi mumbai
 
 //Q.27 BIND  ->same as call,, but hum sirf bind ko ek new function me store karwa lete hai 
 //                            and baad me uss function ko call akrte h
-
-let mybind=myfunction2.bind(person5,"goa","chennai")
+console.log("line break")
+let mybind=myfunction2.bind(person5,"goa","chennai")  //bittu 22 goa chennai
 mybind()
 
+
+
+//Q.28  REST ->rest operator array ke andar bacha hua values ko ek new array me insert karta h
+//i.with array
+const number=[1,2,3,4]
+const [a,...b]=number
+console.log(a)  // 1
+console.log(b)  // [ 2, 3, 4 ]
+
+
+//ii.with function
+function addnumber(a,b,...other){
+  console.log(other)      // [ 3, 4, 7, 8 ]
+  console.log(other[1])  //   ->index 1 in other 
+  console.log(a,b)  //1 2
+}
+addnumber(1,2,3,4,7,8)
+
+
+//Q.29  SPREAD ->   array, object, etc. ko expand karne ke liye hota hai.
+//i.with array
+
+const numbers = [1, 2, 3];
+const clonedNumbers = [...numbers];
+
+console.log(clonedNumbers); // [1, 2, 3]
+
+//ii.combining array
+const arr1 = [1, 2];
+const arr2 = [3, 4];
+const combined = [...arr1, ...arr2];
+
+console.log(combined); // [1, 2, 3, 4]
+
+//iii.
+const arr = [2, 3,6,7];
+const newArr = [1, ...arr, 4];
+
+console.log(newArr); // [ 1, 2, 3, 6, 7, 4 ]
+
+//iv. function
+const myarray=[1,2,3,4];
+
+function addnumber2(a,b,c,d){
+  console.log(a,b,c,d)  //  1, 2, 3, 4
+}
+
+addnumber2(...myarray)
+
+//NOTE:- REST me hum parameter accept karte hai and SPREAD me hum argumnet me pass karte h .
