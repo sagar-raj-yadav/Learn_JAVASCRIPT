@@ -209,20 +209,92 @@ console.log("abc"+ +"dfr") //abcNaN
 console.log("abc"+ +"3") //abc
 //+"3" ->string "3" me number 3 h, to wo number me convert hoga.
 
-//.245 call
-let name1={
-  first:"akash",
-  last:"yadav",
-  printName:function(){
-    console.log(this.first+" "+this.last)  
+
+//Q.25 call
+//call ke help se hum function borrow kar sakte h.
+
+//1st way
+const person1={
+  name:"akash",
+  age:20,
+  myfunction:function(){
+    console.log(this.name)
+    console.log(this.age)
   }
 }
-name1.printName()//akash yadav
+
+person1.myfunction(); //akash 20
 
 
-let name2={
-  first:"ram",
-  last:"sita",
+const person2={
+  name:"megha",
+  age:25
 }
 
-name1.printName.call(name2)  //ram sita
+person1.myfunction.call(person2)  //megha 25
+
+
+//2nd way->if function is outside the object
+
+const person3={
+  name:"bittu",
+  age:22
+}
+
+const person4={
+  name:"vishal",
+  age:21
+}
+
+let myfunction=function(){
+  console.log(this.name)
+  console.log(this.age)
+}
+
+myfunction.call(person3)  //bittu 22
+
+myfunction.call(person4)  //vishal 21
+
+
+
+//Q.26 APPLY
+
+const person5={
+  name:"bittu",
+  age:22
+}
+
+const person6={
+  name:"vishal",
+  age:21
+}
+
+let myfunction2=function(mycity1,mycity2){
+  console.log(this.name)
+  console.log(this.age)
+  console.log(mycity1,mycity2)
+}
+
+myfunction2.call(person5,"koderma","barhi") //bittu 22 koderma barhi
+
+myfunction2.call(person6,"ranchi","mumbai")  //vishal 21 ranchi mumbai
+
+//Note: hum multiple argument pass kar sakte h
+
+
+// apply me liye hum ek ek karke argument pass nhi karenge ,direct array paas kar denge
+//mujhe apply me bhi sam ouput milega ,but apply me array pass kar sakte h
+let arr1=["koderma","barhi"]
+let arr2=["ranchi","mumbai"]
+
+myfunction2.apply(person5,arr1) //bittu 22 koderma barhi
+
+myfunction2.apply(person6,arr2)  //vishal 21 ranchi mumbai
+
+
+//Q.27 BIND  ->same as call,, but hum sirf bind ko ek new function me store karwa lete hai 
+//                            and baad me uss function ko call akrte h
+
+let mybind=myfunction2.bind(person5,"goa","chennai")
+mybind()
+
