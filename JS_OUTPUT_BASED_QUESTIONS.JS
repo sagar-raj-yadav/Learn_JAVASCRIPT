@@ -347,4 +347,7 @@ function addnumber2(a,b,c,d){
 
 addnumber2(...myarray)
 
-//NOTE:- REST me hum parameter accept karte hai and SPREAD me hum argumnet me pass karte h .
+//NOTE:- REST me hum parameter accept karte hai and
+//  SPREAD me hum argumnet me pass karte h .
+
+
