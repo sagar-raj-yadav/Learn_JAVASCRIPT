@@ -76,3 +76,7 @@ function countchar(s,ch){
 }
 let ans=countchar("minimanabibi","i")
 console.log(ans) //4
+
+// Q.7  ye corect hai because agar variable ko declare nhi kiya gya h wo to by default "var" hai.
+s=10
+console.log(s);   //output=10
