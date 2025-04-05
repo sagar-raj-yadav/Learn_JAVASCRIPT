@@ -350,4 +350,40 @@ addnumber2(...myarray)
 //NOTE:- REST me hum parameter accept karte hai and
 //  SPREAD me hum argumnet me pass karte h .
 
+//Q.30 
+// setTimeout -> kuch delay ke baad function ko call karta h.
+// sirf ek hi baar function execute hoga
 
+setTimeout(()=>{
+console.log("hello")
+},1500)  // 2 second ke baad hello print hoga sirf ek baar
+
+
+//Q.31  setInterval -> kuch time ke baad function ko baar baar call karta h.
+setInterval(() => {
+  console.log("Every 2 seconds");
+}, 2000);  // haar 2s me function call hoga 
+
+//Q.32 clearInterval -> setInterval ko stop karne ke liye use hota h.
+
+let count=0;
+
+let myintervalId=setInterval(()=>{
+  count++;
+  console.log(count);
+
+  if(count===5)
+  {clearInterval(myintervalId)}  
+
+},2000)
+
+
+
+var let=10
+console.log(let)  //output=10
+
+
+'use strict';
+
+var let=10
+console.log(let)  //error
