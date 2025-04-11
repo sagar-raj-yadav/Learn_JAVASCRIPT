@@ -1,11 +1,16 @@
 1.what is Node Js?
-Nodejs is a javascript runtime environment for executing javascript code on server side. 
+--Nodejs is a javascript runtime environment for executing javascript code on server side. 
+--Nodejs is idle for scalable network and REST api server.
+--NodeJs features->Non-blocking I/O ,suitable for I/O heavy operations,suitable for low level network applications like chat (websocket)
+--Node js provide Api that directly read and write Local File system.
 
 2.client side rendering ->
-HTML page aur data , browser (client) ke side generate hota hai, na ki server pe, server sirf empty HTML and JS file send karta h.Browser me JavaScript execute hota hai, aur data fetch karke final HTML page generate hota hai.
+server sirf empty HTML and JS file send karta h.Browser me JavaScript execute hota hai and then whole page will be loaded.
+->Not SEO friendly, First Time page load hone ka time zyada hota hai 
 
 3.server side rendering ?
-Server-side rendering ek process hai jisme server pe HTML page generate hota hai aur wo direct browser ko bheja jata hai. Browser ko sirf HTML ko render karna hota hai, 
+server pe HTML page generate hota hai aur wo direct browser ko send kar deta hai. Browser ko sirf HTML ko render karna hota hai, 
+->Better SEO friendly, First Time page load hone ka time kum hota hai 
 
 4.single threaded?
 Ek time pe sirf ek hi task perform hoga.And haar task sequentially perform hoga .second task tab tak execute nhi hoga jab tak first task complete na ho jaye.
