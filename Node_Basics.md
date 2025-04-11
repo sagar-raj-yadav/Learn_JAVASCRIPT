@@ -15,20 +15,12 @@ server pe HTML page generate hota hai aur wo direct browser ko send kar deta hai
 4.single threaded?
 Ek time pe sirf ek hi task perform hoga.And haar task sequentially perform hoga .second task tab tak execute nhi hoga jab tak first task complete na ho jaye.
 
-5.event, event emitter, event queue, event loop,  event-driven architecture 
 
-i.Event->any action (button click,data fetching,data receiving,database query execution)
 
-ii.Event emitter->ye event generate karta hai and listener ko batata hai ki koi event hua h.
+5.Event Driven Architecture
+request aaya ->isko event queue me enter kar dega->event loop wo request ko utha ke thread pool me daal dega and after completion ,fir event loop response send kr dega
 
-iii.Event queue->saara event ek queue me rahta hai and sequentially execute hota h.
-
-iv.Event loop->Event loop ek infinite loop hai jo continuously event queue check karta hai aur kaam execute karta hai.
-Example:-
-User ne server se data maanga (event).
-Server ne bola: "Data ready hone do, tab tak dusra kaam kar lo."Ab event loop continuously check karte rahega ki data download hua ya nhii. Now, Event loop ne dekha ki data download ho gaya, toh user ko response de dega.
-
-v.Event-driven architecture ->Pura system hai jo events ke aane par kaam karta hai and wo saara kaam efficiently aur asynchronously hota h.
+event loop queue and pool me continuosly check krta h and request response ko handle karta h. 
 
 6.Node js is good for ->real time application,light weight ,suitable for I/O heavy operations and scalable,microservice based architecture,Node js provide Api that directly read and write Local File system.
 
