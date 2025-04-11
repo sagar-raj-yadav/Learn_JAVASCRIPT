@@ -4,6 +4,9 @@
 --NodeJs features->Non-blocking I/O ,suitable for I/O heavy operations,suitable for low level network applications like chat (websocket)
 --Node js provide Api that directly read and write Local File system.
 
+=>what JS do on the server side?
+authentication,authorization,database management(CRUD),input validation,error handling
+
 2.client side rendering ->
 server sirf empty HTML and JS file send karta h.Browser me JavaScript execute hota hai and then whole page will be loaded.
 ->Not SEO friendly, First Time page load hone ka time zyada hota hai 
