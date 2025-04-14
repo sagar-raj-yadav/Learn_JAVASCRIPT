@@ -28,9 +28,8 @@ Workflow ek YAML file hoti hai jo define karti hai ki kaunsa job kya kaam krega,
 ->Note: Kuch bhi automate karna hai to workflow create karna hoga.
 
 # 5. Events ->ye tab trigger hoga jab workflow ko run karna ho.
-
 push → Jab code push ho.
-pull_request → Jab koi PR create kare.
+pull_request → Jab koi pull request create kare.
 schedule → Daily ya weekly koi task run karna ho.
 release → Jab koi GitHub release banaye.
 
@@ -41,12 +40,31 @@ Types of runners ->
 i.GitHub-Hosted Runners (Default wale)
 ii.Self-Hosted Runners (Apne khud ke servers pe)
 
-# 7.GitHub Secrets Setup 
-Jab bhi tum GitHub Actions use karte ho aur kisi sensitive information (like API keys, passwords, tokens) ko store karna hota hai, to GitHub Secrets ka use karte hain.
+# push my code into virtual machine?
+mera code mera repo me hai,lekin usko ubunto virtual machine me bhejna hoga ,because workflow to wahi run hoga na.
 
-steps:-
-your github repo->setting->Secrets and Variables->Actions->New repository secret
+# Method 1:- (hard way)
+name: Deploy Dist
+on: [push,workflow_dispatch]     # these are called event    
+jobs:
+    test:       
+        runs-on: ubuntu-latest  
+        steps:
+            - name : "get code"
+              run : |
+               echo "cloning repo"
+               echo "${{toJson(github)}}"
+               git clone https://github.com/${{github.repository}}.git
 
-# 6.create a work flow => 
-  A.create a folder name ".github"->folder name "workflows" -> file name with "file_name.yaml"
+
+
+# Method 2:- use github marketplace
+
+
+
+Note: git commit -m "add comment [skip ci]" ->isse workflow automatically trigger nhi hoga.
+hume manually trigger karna hoga.( because we use [skip ci] )
+
+Note: difference between "npm install" and "npm ci"
+
 
