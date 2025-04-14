@@ -22,9 +22,10 @@ code push->unit test ->Security scan ->                      build->deploy
 =>kuch bhi automate karna hai to hume ek workflow create karna hoga.
 
 # 4.workflow->
-Workflow ek YAML file hoti hai jo define karti hai ki kaunsa process kab aur kaise run hoga (process like build,test). 
-->Yeh GitHub repository ke .github/workflows/ folder me hoti hai.
+Workflow ek YAML file hoti hai jo define karti hai ki kaunsa job kya kaam krega,like one job to run all the test cases,second job is to build react project.(workflow contain multiple jobs)
+-> " .github folder -> workflows folder " iss folder ke andar workflow create karte h.
 ->one repository can have multiple workflows.
+->Note: Kuch bhi automate karna hai to workflow create karna hoga.
 
 # 5. Events ->ye tab trigger hoga jab workflow ko run karna ho.
 
