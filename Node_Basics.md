@@ -8,9 +8,11 @@ authentication,authorization,database management(CRUD),input validation,error ha
 server sirf empty HTML and JS file send karta h.Browser me JavaScript execute hota hai and then whole page will be loaded.
 ->Not SEO friendly, First Time page load hone ka time zyada hota hai 
 
-3.server side rendering ?
+3.server side rendering (SSR) ?
 server pe HTML page generate hota hai aur wo direct browser ko send kar deta hai. Browser ko sirf HTML ko render karna hota hai, 
 ->Better SEO friendly, First Time page load hone ka time kum hota hai 
+
+->SSR ke liye template engine(like pug) ka use krte h.
 
 4.single threaded?
 Ek time pe sirf ek hi task perform hoga.And haar task sequentially perform hoga .second task tab tak execute nhi hoga jab tak first task complete na ho jaye.
@@ -55,6 +57,6 @@ iv.DNS ko haar URL ke corresponding IP address pata hota h
 v.DNS return corrresponding IP address to browser
 vi.Browser will go to that IP address.
 
-13.
+13. 
 
 
